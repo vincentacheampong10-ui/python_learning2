@@ -1,24 +1,28 @@
-# 2D Numpad
+# Dictionary
 
-# fruits = ["apples", "banana", "coconut"]
-# vegetable = ["celery", "carrots", "potatoes"]
-# meats = ["chicken","fish","turkey"]
+capitals = {"USA": "Washington D.C.",
+            "India": "New Delhi",
+            "China": "Beijing",
+            "Russia": "Moscow"}
+
+# print(dir(capitals))
+
+# print(capitals.get("USA"))
+# print(capitals.get("Japan"))
+
+capitals.update({"Germany": "Berlin"})
+# for capital in capitals:
+#     print(capital)
+
+# keys = capitals.keys()
 #
-# groceries = [fruits, vegetable, meats]
+# for key in capitals.keys():
+#     print(key)
 #
-# for collection in groceries:
-#     for food in collection:
-#       print(food, end= " ")
-#     print()
+# values = capitals.values()
+#
+# for value in capitals.values():
+#     print(value)
 
-numpad_1 = [1, 2, 3]
-numpad_2 = [4, 5, 6]
-numpad_3 = [7, 8, 9]
-numpad_4 = ["*", "0", "#"]
-
-calculator = [numpad_1, numpad_2, numpad_3, numpad_4]
-
-for num in calculator:
-    for row in num:
-     print(row,  end=" ")
-    print()
+for key, value in capitals.items():
+    print(f"{key}: {value}")
