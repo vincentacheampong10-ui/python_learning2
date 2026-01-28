@@ -1,25 +1,12 @@
-# Shopping cart program
+# 2D Collections
 
-foods = []
-prices = []
-total = 0
+fruits = ["apples", "banana", "coconut"]
+vegetable = ["celery", "carrots", "potatoes"]
+meats = ["chicken","fish","turkey"]
 
-while True:
-    food = input("Enter a food to buy(q to quit): ")
-    if food.lower() == "q":
-        break
-    else:
-        price = float(input(f"Enter the price for {food}: $"))
-        foods.append(food)
-        prices.append(price)
+groceries = [fruits, vegetable, meats]
 
-print("------- Your Cart -------")
-
-for food in foods:
-    print(food)
-
-for price in prices:
-    total += price
-
-print(f"Your total is ${total}")
-
+for collection in groceries:
+    for food in collection:
+      print(food, end= " ")
+    print()
